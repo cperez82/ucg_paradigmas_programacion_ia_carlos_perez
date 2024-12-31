@@ -15,13 +15,13 @@ from sklearn.metrics import accuracy_score, mean_squared_error, r2_score, confus
 
 ## Declaramos la variable api_token que contiene las credenciales previamente
 ## configuradas en nuestro portal de Kaggle
-api_token = {"username":"carlosperezreyes",
-             "key":"7fd9aad06e8cd1fe8269afb672943514"}
+##api_token = {"username":"carlosperezreyes",
+ ##            "key":"7fd9aad06e8cd1fe8269afb672943514"}
 
 ## Importamos en modo escritura dicha variable api_token
 ## para lo cual especificamos la ruta
-with open('/Users/carlosperez/.kaggle/kaggle.json','w') as file:
-    json.dump(api_token,file)
+##with open('/Users/carlosperez/.kaggle/kaggle.json','w') as file:
+ ##   json.dump(api_token,file)
 
 
 ## Con este comando ejecutamos en el terminal y visualizamos todos los datasets
