@@ -35,7 +35,9 @@ from sklearn.metrics import accuracy_score, mean_squared_error, r2_score, confus
 ## Ahora vamos a revisar el contenido del archivo zip pima-indians-diabetes-database.zip
 ## para lo cual usamos la importación de la libreria zipfile y lo asignamos la ruta del archivo
 ## a la variable archivo_zip, luego leemos el archivo zip y validamos que tenga 1 sólo archivo
-archivo_zip = '/Users/carlosperez/maestria/materia1/proyecto_final/pima-indians-diabetes-database.zip'
+##archivo_zip = '/Users/carlosperez/maestria/materia1/proyecto_final/pima-indians-diabetes-database.zip'
+archivo_zip = 'pima-indians-diabetes-database.zip'
+
 with zipfile.ZipFile(archivo_zip,'r') as zip_file:
     for nombre_archivo in zip_file.namelist():
         print(nombre_archivo)
