@@ -15,35 +15,14 @@ from sklearn.metrics import accuracy_score, mean_squared_error, r2_score, confus
 
 ## Declaramos la variable api_token que contiene las credenciales previamente
 ## configuradas en nuestro portal de Kaggle
-##api_token = {"username":"carlosperezreyes",
-##             "key":"7fd9aad06e8cd1fe8269afb672943514"}
+api_token = {"username":"carlosperezreyes",
+             "key":"7fd9aad06e8cd1fe8269afb672943514"}
 
 ## Importamos en modo escritura dicha variable api_token
 ## para lo cual especificamos la ruta
-##with open('/Users/carlosperez/.kaggle/kaggle.json','w') as file:
-##    json.dump(api_token,file)
-##with open(os.path.expanduser('~/.kaggle/kaggle.json'), 'w') as file:
-##    json.dump(api_token, file)
+with open('/Users/carlosperez/.kaggle/kaggle.json','w') as file:
+    json.dump(api_token,file)
 
-# Obtener las credenciales de Kaggle desde las variables de entorno configuradas en Streamlit Cloud
-kaggle_username = os.getenv('KAGGLE_USERNAME')
-kaggle_key = os.getenv('KAGGLE_KEY')
-
-# Verificar si las credenciales se obtuvieron correctamente
-if kaggle_username and kaggle_key:
-    # Creamos el directorio .kaggle si no existe
-    os.makedirs(os.path.expanduser('~/.kaggle'), exist_ok=True)
-
-    # Creamos el archivo kaggle.json con las credenciales
-    api_token = {
-        'username': kaggle_username,
-        'key': kaggle_key
-    }
-    with open(os.path.expanduser('~/.kaggle/kaggle.json'), 'w') as file:
-        json.dump(api_token, file)
-    print("Archivo kaggle.json creado exitosamente.")
-else:
-    print("No se pudo obtener las credenciales de Kaggle.")
 
 ## Con este comando ejecutamos en el terminal y visualizamos todos los datasets
 ## para lo cual seleccionamos con el que vamos a trabajar
